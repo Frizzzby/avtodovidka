@@ -22,15 +22,6 @@ function initScrollHeader() {
     });
   }
 }
-function initModals() {
-  const modalBtns = document.querySelectorAll('[href^="#my-popup"]');
-  modalBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert('В данной версии клона сайта модальные окна не реализованы');
-    });
-  });
-}
 function initScrollAnimations() {
   const animateSections = () => {
     const sections = document.querySelectorAll('section');
@@ -49,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM fully loaded');
   initHomeLink();
   initScrollHeader(); // добавляем инициализацию эффекта для хедера
-  initModals();
   initScrollAnimations();
 });
 
@@ -75,10 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Удаляем старую шапку на мобильных устройствах
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1024) {
     const oldHeader = document.querySelector("header.header");
     if (oldHeader) {
       oldHeader.remove();
     }
   }
-});
+})
