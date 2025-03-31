@@ -54,6 +54,10 @@ ul, ol {
     border: none;
     cursor: pointer;
 }
+.mobile-header,
+  .mobile-menu {
+    display: none !important;
+  }
 .contract-info {
     font-weight: 600;
     color: #ff5722;
@@ -460,32 +464,32 @@ ul, ol {
     font-size: 14px;
     text-align: center;
 }
-.why-germany {
+.whyiziDocument {
     padding: 60px 0;
     background-color: #1a1a1a;
 }
-.why-germany__text {
+.whyiziDocument__text {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 40px;
 }
-.why-germany__grid {
+.whyiziDocument__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-.why-germany__item {
+.whyiziDocument__item {
     background-color: #2a2a2a;
     border-radius: 10px;
     padding: 14px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавлено для более плавного эффекта */
 }
-.why-germany__item:hover {
+.whyiziDocument__item:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-.why-germany__icon {
+.whyiziDocument__icon {
     width: 60px;
     height: 60px;
     margin: 0 auto 20px;
@@ -497,22 +501,22 @@ ul, ol {
     transition: transform 0.3s, background-color 0.3s;
     color: #000;
 }
-.why-germany__item:hover .why-germany__icon {
+.whyiziDocument__item:hover .whyiziDocument__icon {
     transform: rotate(10deg);
     background-color: rgba(231, 76, 60, 0.21);
 }
-.why-germany__title {
+.whyiziDocument__title {
     font-size: 18px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 15px;
     color: #afbde7; /* Изменено на красный */
 }
-.why-germany__desc {
+.whyiziDocument__desc {
     font-size: 14px;
     text-align: center;
 }
-.why-germany__action {
+.whyiziDocument__action {
     margin-top: 40px;
     text-align: center;
 }
@@ -693,7 +697,7 @@ ul, ol {
     color: #aaa;
 }
 .footer__social {
-    display: flex;
+    display: inline-flex;
     gap: 10px;
 }
 .social-link {
@@ -727,7 +731,7 @@ ul, ol {
     }
 }
 .stats-item:hover .stats-item__icon,
-.why-germany__item:hover .why-germany__icon,
+.whyiziDocument__item:hover .whyiziDocument__icon,
 .reason-card:hover .reason-card__icon {
     animation: pulse 1s infinite; /* Добавлено для анимации при наведении */
 }
@@ -805,19 +809,6 @@ ul, ol {
     position: relative;
     z-index: 1;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-.breadcrumbs {
-    font-size: 14px;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-.breadcrumbs a {
-    color: #fff;
-    transition: opacity 0.3s;
-}
-.breadcrumbs a:hover {
-    opacity: 0.8;
 }
 .page-content {
     padding: 0 0 60px;
@@ -990,132 +981,9 @@ ul, ol {
 .section-subtitle,
 .service-card,
 .reason-card,
-.why-germany__item,
+.whyiziDocument__item,
 .faq__item {
     animation: fadeIn 0.8s ease-out forwards;
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@media screen and (max-width: 1200px) {
-    .container {
-        max-width: 970px;
-    }
-}
-@media screen and (max-width: 992px) {
-    .container {
-        max-width: 750px;
-    }
-    .header__main .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-    .menu__item {
-        margin-left: 0;
-        margin-right: 15px;
-    }
-    .menu__item--has-children::after {
-        right: -15px;
-    }
-    .banner {
-        padding: 80px 0;
-    }
-    .banner__title {
-        font-size: 36px;
-    }
-    .banner__subtitle {
-        font-size: 16px;
-    }
-    .subpage-feature {
-        flex-direction: column;
-    }
-    .subpage-feature-image,
-    .subpage-feature-content {
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .container {
-        max-width: 100%;
-        padding: 0 15px;
-    }
-    .header__contacts {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .header__mail, .header__skype {
-        margin-bottom: 5px;
-    }
-    .banner__buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    .service-grid {
-        gap: 20px;
-    }
-    .footer__main {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .footer__column {
-        width: 100%;
-    }
-    .footer__bottom {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    .footer__copyright {
-        text-align: center;
-    }
-    .footer__links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-}
-@media screen and (max-width: 576px) {
-    .banner {
-        padding: 60px 0;
-    }
-    .banner__title {
-        font-size: 28px;
-    }
-    .section-title {
-        font-size: 28px;
-    }
-    .section-subtitle {
-        font-size: 16px;
-    }
-    .reasons__grid,
-    .benefits__grid,
-    .subpage-grid {
-        grid-template-columns: 1fr;
-    }
-    .contact-info-items {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .contact-info-item {
-        width: 100%;
-    }
 }
 .advantage-icon {
     color: #e74c3c;
@@ -1283,17 +1151,6 @@ ul, ol {
 .price-button:hover {
     background-color: #ff5722;
     color: #fff;
-}
-.water-block {
-    margin-top: 3rem;
-    padding: 2rem;
-    background: #151515;
-    border-left: 4px solid #ff5722;
-    font-size: 1rem;
-    color: #ccc;
-    line-height: 1.6;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 .package-card {
     background-color: #1e1e1e;
@@ -1491,48 +1348,13 @@ ul, ol {
 .nav-button:focus {
     color: red;
 }
-
-/* Плавная прокрутка */
-
 html {
   scroll-behavior: smooth;
 }
-
-/* Адаптивный дизайн */
-
-/* Адаптив для планшетов и телефонов */
-
-
-
-/* Адаптивный дизайн для планшетов и телефонов */
-
-
-/* Отключаем горизонтальную прокрутку и адаптируем контент */
 html, body {
     overflow-x: hidden;
     width: 100%;
 }
-
-/* Уменьшаем размеры текста и элементов для мобильных устройств и планшетов */
-
-
-/* Дополнительные уменьшения для мобильных устройств */
-
-
-/* Корректно скрываем блок .why-germany на мобильных устройствах */
-
-
-/* Корректно скрываем блок .benefits__stats на мобильных устройствах */
-
-
-/* Размеры текста для мобильной версии */
-
-
-/* Центрирование карточек пакетов в мобильной версии */
-
-
-
-/* Фикс артефакта под шапкой */
 .header__top-container {
     padding: 4px 0;
 }
@@ -1544,20 +1366,7 @@ html, body {
 .modern-nav {
     margin: 0;
 }
-
-
-/* Скрываем мобильную шапку и бургер-меню на ПК */
-@media (min-width: 769px) {
-  .mobile-header,
-  .mobile-menu {
-    display: none !important;
-  }
-}
-
-
-/* Современная стилизация футер-кнопки на ПК */
-@media (min-width: 769px) {
-  .footer .cta-block {
+.footer .cta-block {
     padding: 20px 25px;
     border-radius: 16px;
     font-size: 16px;
@@ -1575,11 +1384,6 @@ html, body {
     transform: scale(1.02);
     cursor: pointer;
   }
-}
-
-
-/* Современный стиль для кнопки консультации */
-@media (min-width: 769px) {
   .btn-consultation {
     background-color: #e74c3c;
     color: #fff;
@@ -1601,4 +1405,3 @@ html, body {
     transform: scale(1.03);
     cursor: pointer;
   }
-}
