@@ -1401,7 +1401,7 @@ html, body {
     transform: scale(1.03);
     cursor: pointer;
   }
-.backToTop {
+#backToTop {
   position: fixed;
   bottom: 30px;
   right: 20px;
@@ -1418,6 +1418,6 @@ html, body {
   transition: opacity 0.3s ease;
 }
 
-.backToTop:hover {
+#backToTop:hover {
   background-color: #555;
 }
