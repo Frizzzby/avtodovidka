@@ -441,6 +441,7 @@
   }
 
   .mobile-menu a {
+  text-align: right !important; {
     color: #fff;
     text-decoration: none;
     padding: 10px 0;
