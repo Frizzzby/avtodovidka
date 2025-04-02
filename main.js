@@ -91,3 +91,44 @@ function initBackToTop() {
 document.addEventListener("DOMContentLoaded", () => {
   initBackToTop();
 });
+
+
+function initModals() {
+  document.querySelectorAll('a[href="#privacy"]').forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      document.getElementById("modal-privacy").style.display = "block";
+    });
+  });
+
+  document.querySelectorAll('a[href="#disclaimer"]').forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      document.getElementById("modal-disclaimer").style.display = "block";
+    });
+  });
+
+  document.querySelectorAll('a[href="#newsletter"]').forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      document.getElementById("modal-newsletter").style.display = "block";
+    });
+  });
+
+  document.querySelectorAll(".close").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.getAttribute("data-modal");
+      document.getElementById(modalId).style.display = "none";
+    });
+  });
+
+  window.addEventListener("click", e => {
+    if (e.target.classList.contains("modal")) {
+      e.target.style.display = "none";
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initModals();
+});
