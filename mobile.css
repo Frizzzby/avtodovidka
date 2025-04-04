@@ -310,7 +310,7 @@
 
     .footer, .footer p, .footer a, small, .small-text {
         font-size: 14px !important;
-        padding: 20px 0px 0px;
+        padding: 15px 15px 15px;
     }
 
     h1, h2, h3, h4, h5, h6, .section-title, .benefits__title {
